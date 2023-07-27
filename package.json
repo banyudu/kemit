@@ -1,0 +1,32 @@
+{
+  "name": "kemit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kemit.js",
+  "bin": {
+    "kemit": "./dist/kemit.js",
+    "git-kemit": "./dist/kemit.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "git-branch": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/git-branch": "^2.0.2",
+    "@types/node": "^20.4.5",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  }
+}
