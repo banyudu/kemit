@@ -1,8 +1,9 @@
 {
   "name": "kemit",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "kemit.js",
+  "main": "dist/kemit.js",
   "bin": {
     "kemit": "./dist/kemit.js",
     "git-kemit": "./dist/kemit.js"
@@ -14,6 +15,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "tsc",
+    "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,12 +23,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "git-branch": "^2.0.1"
+    "git-branch": "^2.0.1",
+    "git-log": "1.0.0-rc.3"
   },
   "devDependencies": {
     "@types/git-branch": "^2.0.2",
     "@types/node": "^20.4.5",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
+  },
+  "engines" : { 
+    "node" : ">=16.0.0" 
   }
 }
