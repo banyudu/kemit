@@ -1,7 +1,7 @@
 {
   "name": "kemit",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/kemit.js",
   "bin": {
@@ -32,7 +32,7 @@
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   },
-  "engines" : { 
-    "node" : ">=16.0.0" 
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
